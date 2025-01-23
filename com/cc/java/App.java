@@ -8,20 +8,45 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
 
-        output(queen.doYourJob());
-        output(queen.fly());
+        pollObj(queen);
+        pollObj(worker);
+        pollObj(drone);
 
-        output(worker.doYourJob());
-        output(worker.fly());
+        // output(queen.doYourJob());
+        // output(queen.fly());
+        // output("--------------------");
 
-        output(drone.doYourJob());
-        output(drone.fly());
+        // output(worker.doYourJob());
+        // output(worker.fly());
+        // output("--------------------");
+
+        // output(drone.doYourJob());
+        // output(drone.fly());
+        // output("--------------------");
 
     }
 
+    // Overloading --- gleiche MethodenName aber unterschiedliche Parameterstruktur
+   
+    private static void pollObj(HoneyBee obj){
+    output(obj.doYourJob());
+    output(obj.fly());
+    output("--------------------");
+   }
+//    private static void pollObj(Worker obj){
+//     output(obj.doYourJob());
+//     output(obj.fly());
+//     output("--------------------");
+//    }
+//     private static void pollObj(Drone obj){
+//         output(obj.doYourJob());
+//         output(obj.fly());
+//         output("--------------------");
+//     }
    
    
-    private static void output(String outputStr) {
+   
+   private static void output(String outputStr) {
         System.out.println(outputStr);
     }
 
