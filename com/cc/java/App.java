@@ -12,6 +12,11 @@ public class App {
         pollObj(worker);
         pollObj(drone);
 
+        // Bildung eines Objekts aus der Superklasse
+        //-- Das sollte eigentlich nicht gehen!--//
+        HoneyBee bee = new HoneyBee(); // SuperKlasse!
+        pollObj(bee);
+
         // output(queen.doYourJob());
         // output(queen.fly());
         // output("--------------------");
@@ -26,13 +31,15 @@ public class App {
 
     }
 
-    // Overloading --- gleiche MethodenName aber unterschiedliche Parameterstruktur
-   
+    // 2. Iteration: Polymorphie
     private static void pollObj(HoneyBee obj){
     output(obj.doYourJob());
     output(obj.fly());
     output("--------------------");
    }
+
+// Overloading --- gleiche MethodenName aber unterschiedliche Parameterstruktur
+
 //    private static void pollObj(Worker obj){
 //     output(obj.doYourJob());
 //     output(obj.fly());
